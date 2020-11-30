@@ -123,6 +123,11 @@ label {
   color: #0984e3;
 }
 
+label:checked {
+  font-weight: bold;
+  background-color: #0984e3;
+}
+
 input, select {
   font-family: OdinRounded;
   font-size: 1.5em;
