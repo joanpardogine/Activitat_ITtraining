@@ -74,9 +74,26 @@ section {
   justify-content: space-around;
 }
 
-section#pregunta-2, section#pregunta-3, section#pregunta-4 {
+.elementOcult {
   display: none;
 }
+
+.elementVisible {
+  display: flex;
+}
+
+.noMarcada {
+  background-color: white;
+}
+
+.siMarcada {
+  background-color: blue;
+}
+
+
+/* section#pregunta-2, section#pregunta-3, section#pregunta-4 {
+  display: none;
+} */
 
 section h2 {
   align-self: flex-start;
