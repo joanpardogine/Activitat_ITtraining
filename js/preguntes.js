@@ -1,32 +1,41 @@
 let arrRespostes = [], arrRespostesCorrectes = [];
 arrRespostesCorrectes=[1,3,4,2];
 
-function pregunta(objecte, numPreg){
-  let resposta;
-  let obj;
-    for (let i=0; i<4; i++){
-      if(objecte.form[i].checked){
-        resposta = i + 1 ; // + 1 => per començar des
-                           // de 1 i no des de 0
-      }
-    }
-    arrRespostes[numPreg] = resposta;
-    console.log("arrRespostes[" + numPreg + "] = " + arrRespostes[numPreg]);
-    alert(" has escollit la resposta " + arrRespostes[numPreg]);
-    switch(numPreg) {
-      case 0:
-        obj = document.getElementById("pregunta-1");
-        obj.classList.remove("elementVisible");
-        obj.classList.add("elementOcult");
-        obj = document.getElementById("pregunta-2");
-        obj.classList.remove("elementOcult");
-        obj.classList.add("elementVisible");
-        break;
-    case 1:
-      alert("hola!");
-        break;
-      }
+function pregunta(objecte){
 
+  let numPregunta;  
+  let objecteID = objecte.parentElement.children[0].id;
+  let numResposta;
+  let objecteValor;
+  // ID = resp_1_3
+  // numPregunta = str.charAt(5)
+  // numResposta = str.charAt(7)
+  numPregunta = parseInt(objecteID.charAt(5)-1);
+  numResposta = parseInt(objecteID.charAt(7)-1);
 
-}  // FINAL   function pregunta()
+  objecteValor = objecte.parentElement.children[0].value;
+
+  objecte.parentElement.children[0].form[numResposta].checked = true;
+  
+  arrRespostes[numPregunta] = objecteValor;
+  
+    console.log("arrRespostes[" + numPregunta + "] = " + arrRespostes[numPregunta]);
+    alert(" has escollit la resposta " + arrRespostes[numPregunta]);
+  }  // FINAL   function pregunta()
+
+function passaSeguent(objecte){
+  let numPregunta, numPreguntaSeguent;  
+  // ID = boto-1
+  // numPregunta = str.charAt(5)
+  let objecteID = objecte.parentElement.children[3].id;
+  numPregunta = parseInt(objecteID.charAt(5));
+  numPreguntaSeguent = numPregunta + 1;
+
+        pregunta = document.getElementById("pregunta-" + numPregunta);
+        pregunta.classList.remove("elementVisible");
+        pregunta.classList.add("elementOcult");
+        pregunta = document.getElementById("pregunta-" + numPreguntaSeguent);
+        pregunta.classList.remove("elementOcult");
+        pregunta.classList.add("elementVisible");
+}  // FINAL   function passaSeguent(){
 

@@ -87,7 +87,8 @@ section {
 }
 
 .siMarcada {
-  background-color: blue;
+  background-color: #00b894!important;
+  border-color: greenyellow!important;
 }
 
 
@@ -133,9 +134,15 @@ div.respostes div:hover {
   border: 3px solid #fdcb6e;
 }
 
-label {
+div.divResposta{
+  font-family: 'Courier New', Courier, monospace;
+  /* border: 2px pink solid; */
+}
+
+
+.label {
   width: 50%;
-  font-family: OdinRounded;
+  font-family: OdinRounded!important;
   font-size: 1.5em;
   color: #0984e3;
 }
@@ -158,6 +165,15 @@ input[type=text], select {
   margin-top: 5px;
 }
 
+input[type=radio]:checked {
+  font-weight: bold;
+  background-color: #0984e3;
+  color: red!important;
+}
+
+
+
+
 button {
   width: 20%;  
   font-family: OdinRounded;
@@ -176,6 +192,10 @@ button:hover {
   background-color: #00cec9;
   box-shadow: 0px 0px 15px #74b9ff;
   cursor: pointer;
+}
+
+button[type="button"]:disabled {
+  background-color: #dddddd;
 }
 
 footer {
