@@ -2,7 +2,8 @@ let arrRespostes = [], arrRespostesCorrectes = [];
 arrRespostesCorrectes=["QuartaOpcio","Barcelona i Barakaldo",4,2];
 
 function pregunta(objecte){
-
+  debugger;
+alert("hola!");
   let numPregunta;  
   let objecteID = objecte.parentElement.children[0].id;
   let numResposta;
@@ -21,7 +22,7 @@ function pregunta(objecte){
   
     console.log("arrRespostes[" + numPregunta + "] = " + arrRespostes[numPregunta]);
     alert(" has escollit la resposta " + arrRespostes[numPregunta]);
-  }  // FINAL   function pregunta()
+  }  // FINAL   function pregunta(objecte)
 
 function passaSeguent(objecte){
   debugger;
@@ -38,5 +39,5 @@ function passaSeguent(objecte){
         pregunta = document.getElementById("pregunta-" + numPreguntaSeguent);
         pregunta.classList.remove("elementOcult");
         pregunta.classList.add("elementVisible");
-}  // FINAL   function passaSeguent(){
+}  // FINAL   function passaSeguent(objecte){
 
