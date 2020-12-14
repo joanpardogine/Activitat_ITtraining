@@ -50,34 +50,39 @@
           </section> <!-- FINAL <section id="pregunta-#"> -->
 
           <section id="pregunta-2">
-            <h2>Pregunta #2</h2>
-            <div class="enunciat">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce hendrerit diam vitae urna pulvinar commodo. Suspendisse tristique eu justo in dignissim. Phasellus ut nibh ornare, porttitor sapien a, eleifend massa?</p>
-            </div>
-            <div class="respostes">
-              <div>
-                <input type="radio" id="exemple-2-1" />
-                &nbsp;&nbsp;
-                <label for="exemple-1">Lorem ipsum dolor sit amet</label>
+            <section class="elementVisible" id="pregunta-2">
+              <h2>Pregunta #2</h2>
+              <div class="enunciat">
+                <p>La comanda:<br>
+                  SELECT * FROM CLIENTS<br>
+                  WHERE ciutat LIKE 'bar%';?<br>
+                Quines ciutats retornaria?</p>
               </div>
-              <div>
-                <input type="checkbox" id="exemple-2-2" />
-                &nbsp;&nbsp;
-                <label for="exemple-2">Lorem ipsum dolor sit amet</label>
-              </div>
-              <div>
-                <input type="text" id="exemple-2-3" name="resposta-1" placeholder="Lorem ipsum dolor sit amet" />
-              </div>
-              <div>
-                <select id="exemple-2-4">
-                  <option>Lorem ipsum dolor sit amet</option>
-                  <option>Lorem ipsum dolor sit amet</option>
-                  <option>Lorem ipsum dolor sit amet</option>
-                  <option>Lorem ipsum dolor sit amet</option>
-                </select>
-              </div>
-            </div> <!-- FINAL <div class="respostes"> -->
-            <button>Següent >></button>
+              <div class="respostes">
+                <div>
+                  <input type="radio" id="resp_2_1" value="Barcelona" name="resposta1" onclick="pregunta(this)"/>
+                  &nbsp;&nbsp;
+                  <label onclick="pregunta(this)">Barcelona</label>
+                </div>
+                <div>
+                  <input type="radio" id="resp_2_2" value="Barakaldo"  name="resposta1" onclick="pregunta(this)"/>
+                  &nbsp;&nbsp;
+                  <label onclick="pregunta(this)">Barakaldo</label>
+                </div>
+                <div>
+                  <input type="radio" id="resp_2_3" value="Barcelona i Barakaldo" name="resposta1" onclick="pregunta(this)"/>
+                  &nbsp;&nbsp;
+                  <label onclick="pregunta(this)">Barcelona i Barakaldo</label>
+                </div>
+                <div>
+                  <input type="radio" id="resp_2_4" value="Cap de les anteriors" name="resposta1" onclick="pregunta(this)"/>
+                  &nbsp;&nbsp;
+                  <label onclick="pregunta(this)">Cap de les anteriors</label>
+                </div>
+              </div> <!-- FINAL <div class="respostes">-->
+              <button type="button" id="boto-2" value="boto-2" onclick="passaSeguent(this)">Següent >></button>
+               <!-- disabled -->
+               <!-- <button onmouseover="encima()" onmouseout="fuera()"  type="button" id="boto-1" onclick="mostrar_3();"></button> -->
           </section>  <!-- FINAL <section id="pregunta-#"> -->
 
           <section id="pregunta-3">
