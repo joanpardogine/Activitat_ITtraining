@@ -74,9 +74,9 @@ section {
   justify-content: space-around;
 }
 
-section#pregunta-2, section#pregunta-3, section#pregunta-4 {
+/* section#pregunta-2, section#pregunta-3, section#pregunta-4 {
   display: none;
-}
+} */
 
 section h2 {
   align-self: flex-start;
