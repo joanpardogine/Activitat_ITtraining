@@ -24,6 +24,7 @@ function pregunta(objecte){
   }  // FINAL   function pregunta()
 
 function passaSeguent(objecte){
+  debugger;
   let numPregunta, numPreguntaSeguent;  
   // ID = boto-1
   // numPregunta = str.charAt(5)
