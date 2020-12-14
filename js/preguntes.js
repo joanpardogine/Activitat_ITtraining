@@ -1,5 +1,5 @@
 let arrRespostes = [], arrRespostesCorrectes = [];
-arrRespostesCorrectes=[1,3,4,2];
+arrRespostesCorrectes=["QuartaOpcio",3,4,2];
 
 function pregunta(objecte){
 
