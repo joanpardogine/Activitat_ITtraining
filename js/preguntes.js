@@ -1,9 +1,9 @@
 let arrRespostes = [], arrRespostesCorrectes = [];
+debugger;
 arrRespostesCorrectes=["QuartaOpcio","Barcelona i Barakaldo",4,2];
 
-function pregunta(objecte){
-  debugger;
-alert("hola!");
+function pregunta2(objecte){
+  
   let numPregunta;  
   let objecteID = objecte.parentElement.children[0].id;
   let numResposta;
@@ -15,7 +15,7 @@ alert("hola!");
   numResposta = parseInt(objecteID.charAt(7)-1);
 
   objecteValor = objecte.parentElement.children[0].value;
-
+debugger;
   objecte.parentElement.children[0].form[numResposta].checked = true;
   
   arrRespostes[numPregunta] = objecteValor;
